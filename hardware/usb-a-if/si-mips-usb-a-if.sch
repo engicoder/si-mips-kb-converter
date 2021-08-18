@@ -1,0 +1,186 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:Earth #PWR0101
+U 1 1 6063531A
+P 7150 3600
+F 0 "#PWR0101" H 7150 3350 50  0001 C CNN
+F 1 "Earth" H 7155 3427 50  0000 C CNN
+F 2 "" H 7150 3600 50  0001 C CNN
+F 3 "~" H 7150 3600 50  0001 C CNN
+	1    7150 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 3200 6350 3200
+Wire Wire Line
+	7150 2700 6800 2700
+Wire Wire Line
+	6450 3300 6600 3300
+Wire Wire Line
+	7150 2700 7150 3500
+$Comp
+L power:GND #PWR0104
+U 1 1 6063BD44
+P 6350 3650
+F 0 "#PWR0104" H 6350 3400 50  0001 C CNN
+F 1 "GND" H 6355 3477 50  0000 C CNN
+F 2 "" H 6350 3650 50  0001 C CNN
+F 3 "" H 6350 3650 50  0001 C CNN
+	1    6350 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3300 6450 3500
+Wire Wire Line
+	6450 3500 7150 3500
+Connection ~ 7150 3500
+Wire Wire Line
+	7150 3500 7150 3600
+$Comp
+L Connector_Generic_MountingPin:Conn_01x05_MountingPin J2
+U 1 1 6063376C
+P 6800 3100
+F 0 "J2" H 6888 2972 50  0000 L CNN
+F 1 "Conn_01x05_MountingPin" H 6888 3063 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S5B-PH-SM4-TB_1x05-1MP_P2.00mm_Horizontal" H 6800 3100 50  0001 C CNN
+F 3 "~" H 6800 3100 50  0001 C CNN
+	1    6800 3100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6350 3600 6350 3650
+Wire Wire Line
+	6350 3200 6350 3600
+Connection ~ 6350 3600
+Wire Wire Line
+	5000 3600 5000 3650
+Connection ~ 5000 3600
+Wire Wire Line
+	6350 3600 5000 3600
+Wire Wire Line
+	5900 3200 5300 3200
+Wire Wire Line
+	5000 3500 5000 3600
+Wire Wire Line
+	4900 3500 4900 3900
+$Comp
+L power:GND #PWR0103
+U 1 1 60636B07
+P 5000 3650
+F 0 "#PWR0103" H 5000 3400 50  0001 C CNN
+F 1 "GND" H 5005 3477 50  0000 C CNN
+F 2 "" H 5000 3650 50  0001 C CNN
+F 3 "" H 5000 3650 50  0001 C CNN
+	1    5000 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0102
+U 1 1 60635CD3
+P 4900 3900
+F 0 "#PWR0102" H 4900 3650 50  0001 C CNN
+F 1 "Earth" H 4905 3727 50  0000 C CNN
+F 2 "" H 4900 3900 50  0001 C CNN
+F 3 "~" H 4900 3900 50  0001 C CNN
+	1    4900 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2900 5900 2900
+$Comp
+L Connector:USB_A J1
+U 1 1 60632DC5
+P 5000 3100
+F 0 "J1" H 5057 3567 50  0000 C CNN
+F 1 "USB_A" H 5057 3476 50  0000 C CNN
+F 2 "Connector_USB:USB_A_Molex_67643_Horizontal" H 5150 3050 50  0001 C CNN
+F 3 " ~" H 5150 3050 50  0001 C CNN
+	1    5000 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR0105
+U 1 1 607AAE9F
+P 5900 2750
+F 0 "#PWR0105" H 5900 2600 50  0001 C CNN
+F 1 "VBUS" H 5915 2923 50  0000 C CNN
+F 2 "" H 5900 2750 50  0001 C CNN
+F 3 "" H 5900 2750 50  0001 C CNN
+	1    5900 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 2750 5900 2900
+Connection ~ 5900 2900
+Wire Wire Line
+	5900 2900 6600 2900
+Text Label 5450 3100 0    50   ~ 0
+D+
+Text Label 5450 3200 0    50   ~ 0
+D-
+Wire Wire Line
+	5900 3000 6600 3000
+Wire Wire Line
+	5900 3000 5900 3200
+Wire Wire Line
+	5300 3100 6600 3100
+$Comp
+L Power_Protection:PRTR5V0U2X U1
+U 1 1 60821172
+P 6000 4550
+F 0 "U1" H 6150 4150 50  0000 L CNN
+F 1 "PRTR5V0U2X" H 6350 4400 50  0000 L CNN
+F 2 "usb-a-if:PRTR5V0U2X" H 6060 4550 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PRTR5V0U2X.pdf" H 6060 4550 50  0001 C CNN
+	1    6000 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR0106
+U 1 1 60822BF3
+P 6000 4000
+F 0 "#PWR0106" H 6000 3850 50  0001 C CNN
+F 1 "VBUS" H 6015 4173 50  0000 C CNN
+F 2 "" H 6000 4000 50  0001 C CNN
+F 3 "" H 6000 4000 50  0001 C CNN
+	1    6000 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 4000 6000 4050
+Wire Wire Line
+	6000 5050 6000 5200
+$Comp
+L power:Earth #PWR0107
+U 1 1 60823A02
+P 6000 5200
+F 0 "#PWR0107" H 6000 4950 50  0001 C CNN
+F 1 "Earth" H 6005 5027 50  0000 C CNN
+F 2 "" H 6000 5200 50  0001 C CNN
+F 3 "~" H 6000 5200 50  0001 C CNN
+	1    6000 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4550 6500 4550
+Text Label 6850 4550 2    50   ~ 0
+D-
+Text Label 5250 4550 0    50   ~ 0
+D+
+Wire Wire Line
+	5250 4550 5500 4550
+$EndSCHEMATC

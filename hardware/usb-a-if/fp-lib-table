@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name si-mips-usb-a-if)(type KiCad)(uri ${KIPRJMOD}/si-mips-usb-a-if.pretty)(options "")(descr ""))
+  (lib (name si-mips-common)(type KiCad)(uri H:/dev/repos/si-mips-kb-converter/common/si-mips-common.pretty)(options "")(descr ""))
+)
